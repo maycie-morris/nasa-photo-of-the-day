@@ -1,21 +1,34 @@
-import React, {useEffect, useState} from "react";
-import axios from 'axios'
+import React, {useState, useEffect} from "react";
 import "./App.css";
+import axios from 'axios'
+import NasaList from './Components/NasaList'
 
-const nasaAxios = axios.get('https://api.nasa.gov/planetary/apod')
-  .then((response) => {
-    console.log(response)
-  })
+
 
 function App() {
+
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
+      <NasaList />
     </div>
   );
 }
 
 export default App;
+
+
+
+// return (
+//   <div className="App">
+//     <div className="logo_container">
+//       <img className="logo" src={logo} alt="studio ghibli official logo" />
+//       <h1>API</h1>
+//       <h2>The count is: {countLevel}</h2>
+//       <button onClick = {() => {setCount(count + 1)}}>{count} times </button>
+//     </div>
+//       <MoviesList />
+//   </div>
+// );
+// }
+
+// export default App;
