@@ -1,5 +1,11 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
+import axios from 'axios'
 import "./App.css";
+
+const nasaAxios = axios.get('https://api.nasa.gov/planetary/apod')
+  .then((response) => {
+    console.log(response)
+  })
 
 function App() {
   return (
