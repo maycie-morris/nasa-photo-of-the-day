@@ -1,6 +1,11 @@
 import React, {useState, useEffect} from "react";
 import axios from 'axios'
 
+import {
+  Card, CardImg, CardText, CardBody, CardLink,
+  CardTitle, CardSubtitle
+} from 'reactstrap';
+
 import NasaCard from './NasaCard'
 
 function NasaList() {
@@ -19,16 +24,15 @@ function NasaList() {
 
   return (
     <div>
-        <ul>
+
                 <NasaCard 
-                url={data.url}
                 title={data.title}
                 date={data.date}
+                url={data.url}
                 explanation={data.explanation}
                 copyright={data.copyright}
                 />
 
-        </ul>
     </div>
   );
 }
